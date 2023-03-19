@@ -64,7 +64,7 @@ taro-vue3
 
 #### 使用说明
 
-遵循
+遵循 CC BY-NC-SA 4.0 许可协议 使用
 
 #### 参与贡献
 
@@ -84,8 +84,6 @@ taro-vue3
 
 
 #### TODO
-
-[blog_log.png (400×400) (ganxb2.com)](https://blog.ganxb2.com/img/about/blog_log.png)
 
 - [ ] 文章详情页（~~骨架屏，底部置顶按钮组~~，js图片绑定高度）
 
