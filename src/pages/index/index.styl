@@ -1,0 +1,142 @@
+flex-center-height(heightVal = 43px)
+	display flex
+	align-items center
+	if (heightVal)
+		height heightVal
+margin-right(rightVal = 5px)
+	margin-right rightVal
+width(widthVal = 100%)
+	width widthVal
+border-radius(radiusVal = 10px)
+	border-radius radiusVal
+/* 多行省略... */
+ellipis-clamp(clampVal = 2, heightVal = 44px)
+	max-height heightVal
+	overflow hidden
+	word-break break-all
+	display -webkit-box
+	-webkit-box-orient vertical
+	-webkit-line-clamp clampVal
+/* 一行省略... */
+ellipis(fontVal = 16px)
+	height 22px
+	color #fff
+	font-size 16px
+	text-indent 10px
+	display inline-block
+	text-overflow ellipsis
+	white-space nowrap
+	overflow hidden
+// ================= 自定义swiper
+.swiper-placeholder
+	width()
+	flex-center-height(150px)
+	justify-content center
+.custom-swiper
+	image
+		width()
+.index-swiper
+	height 150px
+	// max-height 150px
+	overflow hidden
+	.swiper-title
+		position absolute
+		bottom 10px
+		right 0
+		ellipis(14px)
+		width(70%)
+		text-align right
+	.nut-swiper-item
+		overflow hidden
+		image
+			height 190px !important
+// ================= 滚动tab
+.tab-scroll-custom
+	height 52px
+	overflow hidden
+	.tabs-scrollview
+		width(95%)
+	.tabpane-hide, .nut-tabs__content
+		height 0
+		padding 0
+		overflow hidden
+// .list-item-empty
+// transtion('')
+
+// ================= 右侧弹出层
+.left-popup
+	.sponsors-box
+		display flex
+		justify-content center
+		height 88px
+		line-height 88px
+		border-radius()
+		margin 15px
+		background-color rgba(247, 248, 250, 1)
+		color rgba(0, 0, 0, 0.25)
+	.blog-name-box
+		flex-center-height('')
+		line-height 24px
+		justify-content center
+		.blog-name
+			margin-right()
+		.nut-icon
+			display flex
+	.nut-cell-group
+		padding 15px
+		padding-bottom 0
+		.nut-cell-group__warp
+			border-radius()
+	.nut-cell
+		background-color rgba(247, 248, 250, 1)
+		.nut-icon
+			margin-right()
+			margin-top 1px
+	.left-popup-cell-title
+		color rgba(0, 0, 0, 0.25)
+	.popup-placeholder
+		height 60px
+// ================= top-searchbar
+// .top-searchbar
+// padding-top 6px
+
+
+// ================= list-item-custom
+.list-item-custom
+	flex-direction column
+	.list-item-category
+		text-align center
+		margin 10px 0 20px
+	.list-item-img-box
+		position relative
+		image
+			border-radius()
+			width()
+			height 160px !important
+		.list-item-title
+			position absolute
+			bottom 15px
+			left 0
+			ellipis()
+			width()
+	.list-item-description
+		ellipis-clamp()
+		color gray
+	.list-item-info-box
+		flex-center-height('')
+		justify-content space-between
+		margin-top 10px
+		color gray
+		.avatar-box
+			flex-center-height()
+			.nut-avatar
+				border 1px solid #ddd
+				margin-right()
+		.list-item-btn-group
+			color gray
+			flex-center-height()
+			.btn-like
+				flex-center-height()
+				margin-right(15px)
+				.like-account
+					font-size 12px

@@ -1,0 +1,221 @@
+flex-center-height(heightVal = 43px)
+	display flex
+	// 上下中线对齐
+	align-items center
+	if (heightVal)
+		height heightVal
+.margin-l-r-20
+	margin-left 20px
+	margin-right 20px
+.padding-l-r5
+	padding-left 5px
+	padding-right 5px
+.italic
+	font-style italic
+// ================= 我的背景
+.mybg-box
+	height 260px
+	image
+		width 100%
+.pic-wall-popup
+	min-height 256px
+	flex-direction column
+.change-bg-textarea
+	height 130px
+	max-height 130px
+	margin 10px auto
+	width 95%
+	border-radius 10px
+	background-color #f7f8fa
+	textarea
+		height 115px
+.btn-change-bg-box
+	flex-center-height('')
+	color #808080
+.btn-change-bg
+	margin-left 12px
+	margin-right 5px
+// ================= 我的
+.my-info, .my-info-category
+	border-radius 10px
+	margin 10px auto
+	width 92%
+	box-shadow none
+	flex-direction column
+.my-info
+	flex-center-height('')
+	position relative
+	top -55px
+	background linear-gradient(to bottom, rgba(255, 255, 255, 0.9), rgba(247, 248, 250, 0.9) 75%)
+	.my-info-avatar
+		margin-top -40px
+	.my-info-item
+		display flex
+		align-items center
+		margin-bottom 5px
+		.my-info-name
+			font-size 18px
+		.my-info-icon
+			position relative
+			top 5px
+		.lv-text
+			font-size 16px
+		.my-info-addr
+			background rgba(0, 0, 0, 0.1)
+			padding 5px 10px
+			border-radius 10px
+		.my-info-follow
+			position relative
+		.my-info-follow:before, .my-info-follow:after
+			content ''
+			width 1px
+			height 10px
+			background-color #ddd
+			position absolute
+			top 9px
+		.my-info-follow:before
+			left -10px
+		.my-info-follow:after
+			right -13px
+		&:last-child
+			margin-top 10px
+			.my-info-addr
+				margin-right 5px
+.my-info-category
+	display flex
+	margin-top -45px
+	.my-info-category-title
+		padding 10px 0 10px 10px
+		color #808080
+// ================= 其他
+.nut-cell-group
+	padding 15px
+	padding-bottom 0
+	.nut-cell-group__warp
+		border-radius 10px
+	.cell-group-title
+		color #808080
+		padding-left 26px
+	.cell-group-vesion
+		padding-right 26px
+	.cell-group-quit
+		flex-center-height('')
+		justify-content center
+	.nut-cell
+		.nut-icon
+			margin-right 5px
+			margin-top 1px
+// ================= 更新我的信息
+.update-info-popup
+	flex-direction column
+	align-items center
+	.input-box
+		display flex
+		justify-content center
+		width 100%
+		margin-top 10px
+		.input-label
+			width 130px
+			text-align right
+		.input-box-content
+			flex 1
+		.avatar-input
+			margin-left 15px
+		input
+			margin-left 10px
+		.input-addr
+			width 120px
+			margin-left 10px
+			display inline-block
+	.avatar-wrapper
+		margin-top 10px
+		margin-bottom 10px
+		border-radius 50%
+		width 320px
+		// height 320px
+		padding 0
+		display flex
+		// row用justify
+		// justify-content: center
+		align-items center
+		flex-direction column
+		.my-avatar
+			width 160px
+			height 160px
+			background none !important
+			margin-bottom 20px
+			.nut-icon
+				font-size 100px
+	.btn-submit
+		width 75%
+		margin-top 20px
+// ================== 登录]
+@keyframes rotate
+	0%
+		transform translate(-50%, 0) rotateZ(0deg)
+	50%
+		transform translate(-50%, -3%) rotateZ(180deg)
+	100%
+		transform translate(-50%, 0%) rotateZ(360deg)
+.login-popup
+	.nut-popup
+		border-radius 50%
+		opacity 0.85
+		top 60%
+		overflow hidden
+	.nut-overlay
+		backdrop-filter saturate(200%) blur(8px)
+	.login-popup-content
+		display flex
+		flex-direction column
+		align-items center
+		justify-content center
+		width 80px
+		height 80px
+		background -webkit-linear-gradient(315deg, #42d392 25%, #647eff)
+		background-clip text
+		-webkit-background-clip text
+		-webkit-text-fill-color transparent
+		font-weight 900
+		position relative
+		z-index 99
+		.blog-name
+			font-size 20px
+	div
+		width 160px
+		height 160px
+		background transparent
+		display block
+		position absolute
+		bottom 0
+		left 0
+		transition transform 0.15s ease
+		.wave
+			display block
+			width 100%
+			min-height 80px
+			position relative
+			align-items center
+			.before, .after
+				content ''
+				width 120%
+				height 240%
+				position absolute
+				top 0%
+				// left 0%
+				background-color #eb6844
+				animation-iteration-count infinite
+				animation-timing-function linear
+				left 45%
+				animation-name rotate
+				// -wbkit-animation-name rotate
+			.before
+				top 6px
+				border-radius 36%
+				animation-duration 10s
+				-webkit-animation-duration 10s
+			.after
+				top 3px
+				opacity 0.5
+				border-radius 44%
+				animation-duration 7s

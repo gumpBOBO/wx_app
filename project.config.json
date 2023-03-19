@@ -1,0 +1,32 @@
+{
+  "miniprogramRoot": "dist/weapp/",
+  "projectname": "廿壴(ganxb2)博客",
+  "description": "探讨WEB技术.交流日常生活.感悟短暂人生.分享简单快乐",
+  "appid": "wx4286aaa627af8ea7",
+  "setting": {
+    "urlCheck": true,
+    "es6": true,
+    "enhance": true,
+    "compileHotReLoad": false,
+    "postcss": true,
+    "minified": true,
+    "babelSetting": {
+      "ignore": [],
+      "disablePlugins": [],
+      "outputPath": ""
+    },
+    "packNpmRelationList": []
+  },
+  "compileType": "miniprogram",
+  "libVersion": "2.27.1",
+  "srcMiniprogramRoot": "dist/",
+  "packOptions": {
+    "ignore": [],
+    "include": []
+  },
+  "condition": {},
+  "editorSetting": {
+    "tabIndent": "insertSpaces",
+    "tabSize": 2
+  }
+}

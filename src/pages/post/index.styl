@@ -1,0 +1,213 @@
+
+/* # sourceMappingURL=github-markdown.min.css.map */
+ellipis(fontVal = 16px)
+	height 22px
+	font-size 16px
+	text-indent 10px
+	display inline-block
+	text-overflow ellipsis
+	white-space nowrap
+	overflow hidden
+widthP(widthVal = 100%)
+	width widthVal
+// FIXME: 防止点击重复 ？但是好像还是会初始造成2次
+@keyframes throttle
+	from
+		pointer-events none
+	to
+		pointer-events all
+.btn-throttle
+	animation throttle 3s step-end forwards
+.btn-throttle:active
+	animation none
+.isCollect
+	color rgb(255,158,13)
+	pointer-events none
+// ================= markdown-body
+.markdown-body
+	--text-color #d3d3d3
+	--body-bg-color #0d0d0d
+	--link-hover-color #34a3ff
+	--white #fff
+	--light #f8f9fa
+	--info #17a2b8
+	--gray #6c757d
+	--green #28a745
+	flex-direction column
+	br
+		display block
+	image
+		border-radius 10px
+		height 200px
+	.post-title
+		font-size 1.15rem
+		font-weight 600
+	.post-banner-box
+		position relative
+		.cat-copyright-tip
+			pointer-events none
+			position absolute
+			top 12px
+			right -20px
+			transform rotate(45deg)
+			width 80px
+			text-align center
+			line-height 20px
+			background var(--green)
+			color #fff
+			clip-path polygon(75% 0, 100% 100%, 0% 100%, 25% 0)
+			z-index 9
+	.post-text-box
+		widthP()
+	.content, image
+		width 100%
+		padding 0
+	.footnote-ref
+		font-size 75%
+		position relative
+		top -0.5em
+	.footnote-text
+		a
+			ellipis()
+			max-width 300px
+		.footnote-backref
+			display none
+	.label
+		display inline
+		border-radius 3px
+		font-size 85%
+		margin 0
+		padding 0.2em 0.4em
+		color var(--text-color)
+		transition color 0.2s ease-in-out
+	// note&label
+	.label
+		color var(--body-bg-color)
+		// padding-bottom 0.4em
+	.label-default
+		background #31d2f2 // #f9fafb
+		// rgba(187, 187, 187, 0.85)
+	.label-primary
+		color var(--white)
+		background #0b5ed7
+		// rgba(183, 160, 224, 0.85)
+	.label-info
+		background #31d2f2
+		// rgba(160, 197, 228, 0.85)
+	.label-success
+		color var(--white)
+		background #157347
+		// rgba(174, 220, 174, 0.85)
+	.label-warning
+		background #ffca2c
+		// rgba(248, 214, 166, 0.85)
+	.label-danger
+		color var(--white)
+		background #bb2d3b
+		// rgba(236, 169, 167, 0.85)
+	.note
+		color var(--light)
+		padding 0.75rem
+		border-left 0.35rem solid
+		border-radius 0.25rem
+		margin 1.5rem 0
+		// color var(--text-color)
+		transition color 0.2s ease-in-out
+		font-size 0.9rem
+	.note-primary
+		border-color var(--link-hover-color)
+		background-color #0b5ed7
+		// rgba(183, 160, 224, 0.65)
+	.note-secondary, .note-default
+		border-color var(--light)
+		background-color #6c757d
+		// rgba(187, 187, 187, 0.65)
+	.note-success
+		background-color #157347
+		border-color #5cb85c
+		// rgba(174, 220, 174, 0.65)
+	.note-danger
+		background-color #bb2d3b
+		// rgba(236, 169, 167, 0.65)
+	.note-warning
+		color var(--body-bg-color)
+		background-color #ffca2c
+		// rgba(248, 214, 166, 0.65)
+	.note-info
+		border-color var(--info)
+		color var(--body-bg-color)
+		background-color #31d2f2
+		// rgba(160, 197, 228, 0.65)
+	.note-light
+		border-color var(--gray)
+		color var(--body-bg-color)
+		background-color #f9fafb
+		// rgba(254, 254, 254, 0.65)
+// ================= 版权申明
+.license-box
+	margin-top 15px
+	.editor-box, .cc-box
+		display inline-block
+		color #808080
+		font-size 14px
+// ================= 上下页
+.prev-next-box
+	display flex
+	justify-content space-between
+// ================= 作者
+.author-box
+	display flex
+	flex-direction column
+	.author-title
+		color #808080
+		padding 0 0 10px 10px
+	.author-content
+		display flex
+		.author-avatar-box
+			flex 2
+			display flex
+			.nut-avatar
+				border 1px solid #ddd
+			.author-name-desc
+				flex 2
+				display flex
+				flex-direction column
+				justify-content center
+				padding-left 10px
+				.author-name, .author-desc
+					width 100%
+					display flex
+	.follow-box
+		display flex
+		align-items center
+.more-tips-btn
+	margin 10px 0
+// ================= bottom置顶按钮组
+.post-bottom-bar
+	height calc(50px + constant(safe-area-inset-bottom)) // 兼容 IOS<11.2
+	height calc(50px + env(safe-area-inset-bottom)) // 兼容 IOS>11.2
+	.post-bottom-bar-grid
+		position fixed
+		bottom 0
+		left 0
+		width 100%
+		padding-bottom constant(safe-area-inset-bottom) // 兼容 IOS<11.2
+		padding-bottom env(safe-area-inset-bottom) // 兼容 IOS>11.2
+		margin 0
+		background-color #fff
+		z-index 3001
+// ================= 暗夜模式
+.nut-theme-dark
+	.markdown-body
+		// background-color #000
+		code
+			background-color #2f2f2f
+			color #aac8e4
+		pre code
+			background-color #16161a
+		blockquote
+			border-left-color #3c3c3c
+		.post-text-box .nut-grid-item__content
+			background transparent !important
+	.post-bottom-bar .post-bottom-bar-grid
+		background-color #131313

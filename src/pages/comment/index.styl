@@ -1,0 +1,134 @@
+
+/* # sourceMappingURL=github-markdown.min.css.map */
+ellipis(fontVal = 16px)
+	height 22px
+	font-size 16px
+	text-indent 10px
+	display inline-block
+	text-overflow ellipsis
+	white-space nowrap
+	overflow hidden
+widthP(widthVal = 100%)
+	width widthVal
+flexColumn()
+	display flex
+	flex-direction column
+.padding-bottom20
+	padding-bottom 20px
+
+// ================ 评论 start
+.comment-cell
+	flex-direction column
+.comment-title
+	padding 0 0 10px 0
+	color gray
+.comment-box
+	.comment-avatar-box
+		display flex
+		.nut-avatar
+			border 1px solid #ddd
+		.comment-avatar-info
+			flex 2
+			flexColumn()
+			justify-content center
+			margin-left 10px
+			.nick-follow
+				display flex
+				.nut-button
+					background none
+					margin-left 5px
+			.date-address
+				color grey
+				font-size 12px
+				margin-top 5px
+				.date-text
+					padding-right 5px
+	.comment-content
+		padding-left 51px
+		overflow hidden
+		.comment-text
+			padding 10px
+			display flex
+			flex-direction column
+			blockquote
+				padding 0 1em
+				color #6a737d
+				border-left 0.25em solid #3c3c3c
+			a
+				color #2c68ff
+		.comment-reply-like
+			display flex
+			justify-content space-between
+			.reply-box
+				color #2c68ff // color #1989fa
+				.nut-icon
+					top 3px
+			.like-box
+				display flex
+				align-items center
+				padding-right 20px
+		.comment-border
+			border-top 2rpx solid #f7f8fa
+			border-bottom 2rpx solid #eaeaea
+			margin-top 10px
+			margin-bottom 10px
+	&:last-child
+		.comment-border
+			display none
+// ================= 底部置顶按钮组
+.fixed-bottom-bar
+	height calc(50px + constant(safe-area-inset-bottom)) // 兼容 IOS<11.2
+	height calc(50px + env(safe-area-inset-bottom)) // 兼容 IOS>11.2
+	// background-color #fff
+	.bottom-bar-content
+		position fixed
+		bottom 0
+		left 0
+		widthP()
+		z-index 3001
+		flexColumn()
+		margin 0
+		background-color #fff
+		padding-bottom constant(safe-area-inset-bottom) // 兼容 IOS<11.2
+		padding-bottom env(safe-area-inset-bottom) // 兼容 IOS>11.2
+		.content-textarea
+			display flex
+			widthP()
+			.textarea-box
+				flex 1
+				padding 10px 10px 10px 20px
+				textarea
+					width 100%
+			.textarea-btn
+				display flex
+				align-items center
+				width 70px
+		.smile-box
+			padding 0 20px 10px
+			.emoji-btn
+				display inline-block
+				padding 5px
+				font-size 18px
+		.all-smiles-box
+			overflow auto
+			min-height 150px
+// ================= 回复弹出层
+.top-popup
+	// overflow hidden
+	.popup-comment
+		padding 70px 0 20px 0
+		width 92%
+		margin 0 auto
+		height 100%
+		.comment-reply
+			.comment-reply-like
+				color gray
+/*
+// .reply-comment
+// 	max-height 150px
+*/
+.nut-theme-dark .bottom-bar-content
+	background-color #131313
+.nut-theme-dark .comment-box .comment-content .comment-border
+	border-top 2rpx solid #3c3c3c
+	border-bottom 2rpx solid #131313

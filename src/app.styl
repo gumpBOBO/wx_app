@@ -1,0 +1,325 @@
+@keyframes rotation
+	0%
+		-webkit-transform rotate(0deg)
+	to
+		-webkit-transform rotate(360deg)
+// 抖动动画
+@keyframes shake
+	0%, 100%
+		transform translateX(0)
+	10%
+		transform translateX(-9px)
+	20%
+		transform translateX(8px)
+	30%
+		transform translateX(-7px)
+	40%
+		transform translateX(6px)
+	50%
+		transform translateX(-5px)
+	60%
+		transform translateX(4px)
+	70%
+		transform translateX(-3px)
+	80%
+		transform translateX(2px)
+	90%
+		transform translateX(-1px)
+// 心跳
+@keyframes ripple
+	0%
+		// box-shadow: 0 0.5em 0.5em rgba(0, 0, 0, 0.4);
+		transform scale(1)
+	50%
+		// box-shadow: 0 1em 1em rgba(0, 0, 0, 0.4);
+		transform scale(1.1)
+// 呼吸
+@keyframes breath
+	0%
+		transform scale(1)
+	50%
+		transform scale(1.1)
+	100%
+		transform scale(1)
+// 右侧向左侧划入
+@keyframes slide-right
+	0%
+		opacity 0
+		transform translateX(100%)
+	100%
+		opacity 1
+		transform translateX(0)
+// 左侧向右侧划入
+@keyframes slide-left
+	0%
+		opacity 0
+		transform translateX(-100%)
+	100%
+		opacity 1
+		transform translateX(0)
+// 上面向下面划入
+@keyframes slide-top
+	0%
+		opacity 0
+		transform translateY(-100%)
+	100%
+		opacity 1
+		transform translateY(0)
+// 下面向上面划入
+@keyframes slide-bottom
+	0%
+		opacity 0
+		transform translateY(100%)
+	100%
+		opacity 1
+		transform translateY(0)
+// 漂浮 float
+@keyframes float-pop
+	0%
+		top 0px
+	25%
+		top 1px
+	50%
+		top 4px
+	75%
+		top 1px
+	100%
+		top 0px
+// 跳跃
+@keyframes jump
+	0%
+		animation-timing-function ease-in
+		transform rotate(0deg) translateY(0)
+	25%
+		animation-timing-function ease-out
+		transform rotate(10deg) translateY(20 * 1px)
+	50%
+		animation-timing-function ease-in
+		transform rotate(0deg) translateY(-10 * 1px)
+	75%
+		animation-timing-function ease-out
+		transform rotate(-10deg) translateY(20 * 1px)
+	100%
+		animation-timing-function ease-in
+		transform rotate(0deg) translateY(0)
+@keyframes flicker
+	0%
+		transform translateX(-100 * 1px) skewX(-20deg)
+	40%, 100%
+		transform translateX(150 * 1px) skewX(-20deg)
+// 水波
+@keyframes twinkle
+	0%
+		transform scale(0)
+	20%
+		opacity 1
+	50%, 100%
+		transform scale(1.4)
+		opacity 0
+.nut-animate
+	.nut-ani-container
+		display inline-block
+	/* Animation css */
+	[class*='nut-animate-']
+		animation-duration 0.5s
+		animation-timing-function ease-out
+		animation-fill-mode both
+	// 抖动
+	.nut-animate-shake
+		animation-name shake
+	// 心跳
+	.nut-animate-ripple
+		animation-name ripple
+	// 漂浮
+	.nut-animate-float
+		position relative
+		animation-name float-pop
+	// 呼吸灯
+	.nut-animate-breath
+		animation-name breath
+		animation-duration 2700ms
+		animation-timing-function ease-in-out
+		animation-direction alternate
+	// 右侧向左侧划入
+	.nut-animate-slide-right
+		animation-name slide-right
+	// 右侧向左侧划入
+	.nut-animate-slide-left
+		animation-name slide-left
+	// 上面向下面划入
+	.nut-animate-slide-top
+		animation-name slide-top
+	// 下面向上面划入
+	.nut-animate-slide-bottom
+		animation-name slide-bottom
+	.nut-animate-jump
+		transform-origin center center
+		animation jump 0.7s linear
+	// 循环
+	.loop
+		animation-iteration-count infinite
+	.nut-animate-twinkle
+		position relative
+		&::after, &::before
+			width 60 * 1px
+			height 60 * 1px
+			content ''
+			box-sizing border-box
+			border 4 * 1px solid rgba(255, 255, 255, 0.6)
+			position absolute
+			// border-radius calc((60 / 2)) * 1px
+			right 50%
+			// margin-top calc((-30 / 2)) * 1px
+			// margin-right calc((-60 / 2)) * 1px
+			z-index 1
+			transform scale(0)
+			animation twinkle 2s ease-out infinite
+		&::after
+			animation-delay 0.4s
+	.nut-animate-flicker
+		position relative
+		overflow hidden
+		&::after
+			width 100 * 1px
+			height 60 * 1px
+			position absolute
+			left 0
+			top 0
+			opacity 0.73
+			content ''
+			background-image linear-gradient(106deg, rgba(232, 224, 255, 0) 24%, #e8e0ff 91%)
+			animation flicker 1.5s linear infinite
+			transform skewX(-20deg)
+			filter blur(3 * 1px)
+// ================ 暗夜模式
+.nut-theme-dark, .nut-theme-dark .custom-topbar-box, .nut-theme-dark .bottom-text
+	background-color #000 !important
+.nut-theme-dark .nut-navbar
+	box-shadow none
+.nut-theme-dark .nut-navbar .nut-navbar__left, .nut-theme-dark .nut-navbar .nut-navbar__right, .nut-theme-dark .left-popup .left-popup-cell-title, .nut-theme-dark .nut-cell__value, .nut-theme-dark .left-popup .sponsors-box, .nut-theme-dark .nut-searchbar__search-icon, .nut-theme-dark .nut-searchbar__input-bar, .nut-theme-dark .post-info .post-title
+	color #808080
+.nut-theme-dark .blog-name-box
+	color #fff
+.nut-theme-dark .bottom-text
+	color #3c3c3c
+.nut-theme-dark .left-popup .nut-cell, .nut-theme-dark .left-popup .sponsors-box
+	background-color rgba(0, 0, 0, 0.2) !important
+.nut-theme-dark .my-info .my-info-item .my-info-addr
+	background-color rgba(255, 255, 255, 0.1) !important
+.nut-theme-dark .my-info-category .nut-grid-item__content, .nut-theme-dark .search-popup .nut-grid-item__content, .nut-theme-dark .custom-topbar-box .nut-navbar, .nut-theme-dark .top-searchbar, .nut-theme-dark .nut-cell-group .nut-cell-group__warp
+	background transparent !important
+.nut-theme-dark .my-info
+	background linear-gradient(to bottom, rgba(27, 27, 27, 0.9), rgba(0, 0, 0, 0.9) 75%) !important
+.nut-theme-dark .skeleton .content .content-line .blockTitle, .nut-theme-dark .skeleton .content .content-line .blockLine
+	background-color #3c3c3c
+// transtion(delayVal = 0.2s, val = 0.6s)
+// if (delayVal)
+// transition all val ease-in-out delayVal
+// else
+// transition all val ease-in-out
+
+// transform(val = -1000px)
+// transform translateY(val)
+
+// .translateY
+// transform()
+
+// .translateYEmpty
+// transform(-256px)
+
+// page
+/* //  background-color #f7f8fa !important */
+widthP(widthVal = 100%)
+	width widthVal
+border-radius(radiusVal = 10px)
+	border-radius radiusVal
+flexColumn()
+	display flex
+	flex-direction column
+.index
+	height 100%
+	min-height 100vh
+	background-color #f7f8fa
+// ================ 重复点击禁用
+.disabled, .disabled .nut-grid-item__content, .disabled .nut-grid-item__text
+	color gray
+	pointer-events none
+.disabled.nut-button
+	color gray !important
+	pointer-events none
+	background none !important
+	background-color #ddd !important
+.nut-theme-dark
+	.disabled, .disabled .nut-grid-item__content, .disabled .nut-grid-item__text
+		color #3c3c3c
+	.disabled.nut-button
+		color #3c3c3c !important
+		background-color gray !important
+// ================ 弹框后禁用滚动
+.noScroll
+	height 90vh
+	min-height 90vh
+	overflow hidden
+// ================= 自定义topbar
+.custom-topbar-box
+	position fixed
+	top 0
+	left 0
+	z-index 999
+	width 100%
+	background-color #fff
+// ================= bottom-text
+.bottom-text
+	text-align center
+	display block
+	color #ddd
+	padding 20px 0
+// ================= moreloadng
+.more-loading
+	display flex
+	justify-content center
+	padding 10px 0
+// ================= ios 安全间距 底部
+.iosBottomHeight
+	height calc(50px + constant(safe-area-inset-bottom)) // 兼容 IOS<11.2
+	height calc(50px + env(safe-area-inset-bottom)) // 兼容 IOS>11.2
+.iosBottomPadding
+	padding-bottom constant(safe-area-inset-bottom) // 兼容 IOS<11.2
+	padding-bottom env(safe-area-inset-bottom) // 兼容 IOS>11.2
+// ================= post-skeleton
+.post-skeleton
+	widthP()
+	.content
+		padding 20px
+		// .content-line
+		// widthP(95%)
+// ================= list-item-skeleton
+.list-item-skeleton
+	widthP()
+	.content
+		padding 20px
+		.content-line
+			widthP(95%)
+			.blockTitle
+				height 90px !important
+				width 100% !important
+				border-radius()
+			// ======== FIXME: first-child && first-of-type 无效
+			.blockTitle + .blockLine
+				width 50% !important
+// ================ 文章扼要
+.post-info-box
+	display flex
+	align-items center
+	image
+		width 120px
+		margin 10px 0 10px 0
+		border-radius 10px
+		max-height 70px
+	.post-info
+		flex 2
+		flexColumn()
+		margin 10px 0 10px 10px
+		font-size 14px
+		.post-author
+			color gray

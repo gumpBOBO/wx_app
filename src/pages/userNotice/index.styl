@@ -1,0 +1,26 @@
+/* 一行省略... */
+ellipis(fontVal = 16px, color = #fff)
+	height 22px
+	color color
+	font-size fontVal
+	text-indent 10px
+	display inline-block
+	text-overflow ellipsis
+	white-space nowrap
+	overflow hidden
+
+.notice-item
+	flex-direction column
+	.name-box
+		color gray
+		font-size 12px
+		.name
+			font-weight 900
+			font-size 16px
+			margin-right 5px
+			color #1989fa
+	.comment
+		padding 10px
+	.title
+		text-align right
+		ellipis(12px, gray)
