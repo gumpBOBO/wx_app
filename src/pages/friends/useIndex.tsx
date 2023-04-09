@@ -27,7 +27,7 @@ export const useIndex = () => {
   })
 	const friendsArray: Array<friendsItemType> = [
 		{
-			img: 'https://blog.ganxb2.com/img/about/blog_log.png',
+			img: 'https://gumpbobo.github.io/img/about/blog_log.png',
 			title: '廿壴(ganxb2)',
 			url: 'https://www.ganxb2.com'
 		}
@@ -67,7 +67,7 @@ export const useIndex = () => {
 							<image
 								src={item.img}
 								mode="heightFix"
-								defaultSource="https://blog.ganxb2.com/img/loading2.webp"
+								defaultSource="https://gumpbobo.github.io/img/loading2.webp"
 							/>
 							<view class="post-info">
 								<text class="post-title">{item.title}</text>

@@ -84,7 +84,7 @@ export const useIndex = () => {
               <image
                 src={item.img}
                 mode="widthFix"
-                defaultSource="https://blog.ganxb2.com/img/loading2.webp"
+                defaultSource="https://gumpbobo.github.io/img/loading2.webp"
               />
               <view class="text-box">
                 <text class="text">『{item.description}』</text>

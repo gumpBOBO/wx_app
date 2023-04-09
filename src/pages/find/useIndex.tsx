@@ -89,7 +89,7 @@ export const useIndex = () => {
                   <image
                     src={item.img}
                     mode="widthFix"
-                    defaultSource="https://blog.ganxb2.com/img/loading2.webp"
+                    defaultSource="https://gumpbobo.github.io/img/loading2.webp"
 										showMenuByLongpress={true}
                   />
                   <view class="text-box">

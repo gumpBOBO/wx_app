@@ -53,7 +53,7 @@ export const useUserInfo = (state: indexStateType, handleFollow?: () => void) =>
         <image
           src={state.myInfo.myBgUrl}
           mode="widthFix"
-          defaultSource="https://blog.ganxb2.com/img/loading2.webp"
+          defaultSource="https://gumpbobo.github.io/img/loading2.webp"
           onError={handleBgError}
           onTap={() => {
             state.pageTitle === 'My' ? (state.showChangeBgPopup = true) : ''

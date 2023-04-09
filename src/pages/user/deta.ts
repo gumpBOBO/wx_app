@@ -47,7 +47,7 @@ export const cellGroupJson = [
 // 头像组
 export const avatarGroup = [
 	{ auto: [
-		'https://blog.ganxb2.com/img/about/blog_log.png',
+		'https://gumpbobo.github.io/img/about/blog_log.png',
 		'https://i0.hdslb.com/bfs/album/f2b3dc401e07aa7f91abb03bdfeae66d0584fd90.jpg@160w_160h_1e_1c.webp',
 		'https://i0.hdslb.com/bfs/album/54b2a8d86741ad947fde34fd68c2132562d328a3.jpg@160w_160h_1e_1c.webp',
 		'https://i0.hdslb.com/bfs/album/eb0090497a6061a2cecceda06dca247c60e1485c.jpg@160w_160h_1e_1c.webp',

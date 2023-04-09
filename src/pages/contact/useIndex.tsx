@@ -27,25 +27,25 @@ export const useIndex = () => {
   })
 	const contactArray: Array<contactArrayType> = [
 		{
-			img: 'https://blog.ganxb2.com/img/about/163.webp',
+			img: 'https://gumpbobo.github.io/img/about/163.webp',
 			text1: '或者网易云搜索',
 			text2: '『廿壴』',
 			site: '163'
 		},
 		{
-			img: 'https://blog.ganxb2.com/img/about/weibo_gump.webp',
+			img: 'https://gumpbobo.github.io/img/about/weibo_gump.webp',
 			text1: '或者微博搜索',
 			text2: '『围脖小生』',
 			site: 'weibo'
 		},
 		{
-			img: 'https://blog.ganxb2.com/img/about/weixin_gump.webp',
+			img: 'https://gumpbobo.github.io/img/about/weixin_gump.webp',
 			text1: '或者微信搜索',
 			text2: '『ganxb2』',
 			site: 'weixin'
 		},
 		{
-			img: 'https://blog.ganxb2.com/img/about/bilibili_gump.webp',
+			img: 'https://gumpbobo.github.io/img/about/bilibili_gump.webp',
 			text1: '或者b站搜索',
 			text2: '『bilibili_gump』',
 			site: 'bilibili'
@@ -104,7 +104,7 @@ export const useIndex = () => {
 									<image
 										src={item.img}
 										mode="widthFix"
-										defaultSource="https://blog.ganxb2.com/img/loading2.webp"
+										defaultSource="https://gumpbobo.github.io/img/loading2.webp"
 										showMenuByLongpress={true}
 									/>
 								</view>

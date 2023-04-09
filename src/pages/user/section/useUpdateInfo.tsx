@@ -34,7 +34,7 @@ export const useUpdateInfo = (state: indexStateType, instance: any) => {
    * @object userInfoState 更新用户信息变量
    */
   const userInfoState: userInfoStateType = reactive({
-    avatar: 'https://blog.ganxb2.com/img/about/blog_log.png',
+    avatar: 'https://gumpbobo.github.io/img/about/blog_log.png',
     nickname: '',
     location: '',
     openid: '',

@@ -40,7 +40,7 @@ export const useIndex = () => {
     showLoginPopup: false,
     myInfo: {
       myBgUrl: 'http://p1.music.126.net/QMciargoIQS3RrTGjFDuJA==/109951168222519134.jpg',
-      avatar: 'https://blog.ganxb2.com/img/about/blog_log.png',
+      avatar: 'https://gumpbobo.github.io/img/about/blog_log.png',
       nickname: '廿壴博客',
       location: '中国',
       // medal: '',

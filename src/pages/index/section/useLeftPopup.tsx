@@ -130,7 +130,7 @@ export const useLeftPopup = (state: indexStateType, customGlobalData: any) => {
       lock-scroll={true}
     >
       <view class="blog-name-box" onTap={handleclickBlogName}>
-        <nut-icon name="https://blog.ganxb2.com/img/apple-touch-icon.png" size="24"></nut-icon>
+        <nut-icon name="https://gumpbobo.github.io/img/apple-touch-icon.png" size="24"></nut-icon>
         <text class="blog-name">廿壴博客</text>
         <nut-icon name="right" size="12"></nut-icon>
       </view>

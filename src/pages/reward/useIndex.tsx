@@ -27,13 +27,13 @@ export const useIndex = () => {
   })
 	const rewardArray: Array<rewardArrayType> = [
 		{
-			img: 'https://blog.ganxb2.com/img/weixin_pay.webp',
+			img: 'https://gumpbobo.github.io/img/weixin_pay.webp',
 			text1: '微信',
 			text2: '打赏',
 			site: 'weixin'
 		},
 		{
-			img: 'https://blog.ganxb2.com/img/zfb_pay.webp',
+			img: 'https://gumpbobo.github.io/img/zfb_pay.webp',
 			text1: '支付宝',
 			text2: '打赏',
 			site: 'zhifubao'
@@ -73,7 +73,7 @@ export const useIndex = () => {
 									<image
 										src={item.img}
 										mode="widthFix"
-										defaultSource="https://blog.ganxb2.com/img/loading2.webp"
+										defaultSource="https://gumpbobo.github.io/img/loading2.webp"
 										showMenuByLongpress={true}
 									/>
 								</view>

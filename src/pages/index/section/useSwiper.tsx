@@ -89,7 +89,7 @@ export const useSwiper = () => {
               <image
                 src={item.img}
                 mode="widthFix"
-                defaultSource="https://blog.ganxb2.com/img/loading2.webp"
+                defaultSource="https://gumpbobo.github.io/img/loading2.webp"
 								onTap={() => handleSwiperClick(item)}
               />
             </nut-swiper-item>
