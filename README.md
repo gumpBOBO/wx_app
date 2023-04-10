@@ -1,5 +1,7 @@
 # 小程序：taro3+Vue3+ts+leancloud+pinia+nutui3
 
+![uni-app(vue3+vite+typescript+pinia+uni-ui)微信小程序APP工程模版](https://pic.rmb.bdstatic.com/bjh/bb2be27929c35d8ccd3c0a5c01b19e7c5852.jpeg)
+
 #### 介绍
 taro3+Vue3+ts+leancloud+pinia+nutui3 微信小程序
 
